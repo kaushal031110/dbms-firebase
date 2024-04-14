@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>File Transfer Platform</title>
+</head>
+
+<body>
+
+    <header>
+        <h2>Anonymous File Sharing Platform</h2>
+    </header>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Retrieve Data</h1>
+                <span>Enter the code in the box below :)</span>
+
+                <label for="image">Enter unique ID:</label>
+                <input type="text" name="image" id="image">
+                <label for="date">Enter date of upload:</label>
+                <input type="date" name="date" id="date">
+                <button type="button" onclick="Retrieve()">Retrieve</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Upload File :)</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Select the file by clicking on "Choose file" option</span>
+                <label for="photo">Select file:</label>
+                <input type="file" name="photo" id="photo" />
+                <button type="button" onclick="uploadImage()" id="upload">Upload</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, User!</h1>
+                    <p>Upload the file you want to retrieve later</p>
+                    <button class="hidden" id="retrive">Retrieve</button>
+                </div>
+
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter the code shared with you earlier (Example code: HELLO123XX)</p>
+                    <button class="hidden" id="upload">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
